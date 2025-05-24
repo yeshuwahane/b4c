@@ -52,7 +52,7 @@ fun ShopTopBar(
         title = {
             Text(
                 text = "Shop",
-                fontSize = 20.sp,
+                fontSize = 24.sp,
                 fontWeight = FontWeight.Bold,
                 color = Color.White
             )
@@ -105,7 +105,7 @@ fun BadgedIcon(
     onClick: () -> Unit
 ) {
     Box(
-        modifier = Modifier.size(48.dp), // IconButton default size
+        modifier = Modifier.size(48.dp),
         contentAlignment = Alignment.Center
     ) {
         IconButton(onClick = onClick) {

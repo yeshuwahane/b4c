@@ -193,7 +193,6 @@ fun ProductCard(
         }
 
         // Cart Icon
-        // Cart Icon
         Box(
             modifier = Modifier
                 .align(Alignment.BottomEnd)

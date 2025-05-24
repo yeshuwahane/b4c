@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -32,8 +33,7 @@ fun CategoryRow() {
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(10.dp)
-            ,
+                .padding(10.dp),
             horizontalArrangement = Arrangement.SpaceBetween
         ) {
             Text(
@@ -58,11 +58,11 @@ fun CategoryRow() {
 
 
 
-        Row(
+        LazyRow(
             modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.SpaceAround
         ) {
-            repeat(4) {
+            items(7) {
                 Column(horizontalAlignment = Alignment.CenterHorizontally) {
                     Image(
                         painter = painterResource(id = R.drawable.categorysample),
@@ -75,6 +75,7 @@ fun CategoryRow() {
                     Text("Cleanser", color = Color.White, fontSize = 12.sp)
                 }
             }
+
         }
 
     }

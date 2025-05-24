@@ -26,8 +26,6 @@ import com.yeshuwahane.b4c.R
 import com.yeshuwahane.b4c.domain.Product
 
 
-
-
 @Composable
 fun ShopScreen() {
     LazyColumn(
@@ -53,8 +51,7 @@ fun ShopScreen() {
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(10.dp)
-                ,
+                    .padding(10.dp),
                 horizontalArrangement = Arrangement.SpaceBetween
             ) {
                 Text(
@@ -100,19 +97,16 @@ fun ShopScreen() {
                 reviews = 249,
                 imageRes = R.drawable.product_image,
             ),
-            // Add more products here
         )
 
 
 
-        items(product1){
+        items(product1) {
 
-                ProductCard(it)
+            ProductCard(it)
 
-                Spacer(modifier = Modifier.height(15.dp))
-            }
-
-
+            Spacer(modifier = Modifier.height(15.dp))
+        }
 
 
     }
